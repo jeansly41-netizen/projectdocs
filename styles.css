@@ -1,4 +1,4 @@
-/* Google Font */
+/* Google Font inladen */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 /* ALGEMENE PAGINA-STIJL */
@@ -12,10 +12,10 @@ body {
   background: #f3f4f6; /* lichtgrijze, rustige achtergrond */
 }
 
-/* KAART / CONTAINER */
+/* KAART / CONTAINER MET TEKST */
 .container {
   max-width: 720px;
-  margin: 40px auto 80px auto; /* extra ruimte onderaan voor de balk */
+  margin: 40px auto;
   background: #ffffff;
   padding: 32px;
   border-radius: 14px;
@@ -42,21 +42,14 @@ p {
   color: #374151;
 }
 
-/* KLEINE accenten: sectie wat ruimte */
 section {
   margin-top: 10px;
 }
 
-/* ONDERBALK - KLASSIEKE NAVIGATIE */
+/* NAVIGATIE MET GEKLEURDE BALKEN ONDERAAN DE PAGINA */
 nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #111827;           /* donkerblauw/grijs */
-  box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.35);
-  padding: 8px 0;
-  z-index: 10;
+  margin-top: 40px;
+  padding: 20px;
 }
 
 nav ul {
@@ -64,42 +57,74 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 18px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;  /* onder elkaar */
+  gap: 12px;
 }
 
-nav ul li {
-  margin: 0;
-}
-
+/* BASISSTIJL VOOR ALLE BALKEN */
 nav ul li a {
+  display: block;
   text-decoration: none;
-  color: #e5e7eb;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
-  position: relative;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.25s ease;
 }
 
-/* Klassieke, rustige hover: zacht kleurtje + underline */
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0%;
-  background: #60a5fa; /* lichtblauw lijntje */
-  transition: width 0.2s ease;
+/* HOME (GRIJS) */
+nav ul li:nth-child(1) a {
+  background: #6b7280;
+}
+nav ul li:nth-child(1) a:hover {
+  background: #4b5563;
+  transform: translateX(6px);
 }
 
-nav ul li a:hover {
-  background-color: #1f2937;  /* iets lichtere donkergrijs */
-  color: #f9fafb;
+/* WEEK 1 (BLAUW) */
+nav ul li:nth-child(2) a {
+  background: #3b82f6;
+}
+nav ul li:nth-child(2) a:hover {
+  background: #2563eb;
+  transform: translateX(6px);
 }
 
-nav ul li a:hover::after {
-  width: 100%;
+/* WEEK 2 (GROEN) */
+nav ul li:nth-child(3) a {
+  background: #22c55e;
+}
+nav ul li:nth-child(3) a:hover {
+  background: #16a34a;
+  transform: translateX(6px);
+}
+
+/* WEEK 3 (ORANJE) */
+nav ul li:nth-child(4) a {
+  background: #f97316;
+}
+nav ul li:nth-child(4) a:hover {
+  background: #ea580c;
+  transform: translateX(6px);
+}
+
+/* WEEK 4 (PAARS) */
+nav ul li:nth-child(5) a {
+  background: #8b5cf6;
+}
+nav ul li:nth-child(5) a:hover {
+  background: #7c3aed;
+  transform: translateX(6px);
+}
+
+/* WEEK 5 (GEEL) */
+nav ul li:nth-child(6) a {
+  background: #eab308;
+  color: #1e1e1e; /* donkere tekst voor leesbaarheid */
+}
+nav ul li:nth-child(6) a:hover {
+  background: #ca8a04;
+  color: #111;
+  transform: translateX(6px);
 }
