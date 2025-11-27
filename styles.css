@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== ZACHTE ACHTERGROND VLEKKEN ===== */
+/* ===== ZACHTE ACHTERGROND VLEKKEN + ANIMATIE ===== */
 body::before,
 body::after {
   content: "";
@@ -49,7 +49,7 @@ body::after {
   100% { transform: translate(-12px, 14px); }
 }
 
-/* ===== CONTAINER ===== */
+/* ===== CARD / CONTAINER ===== */
 .container {
   max-width: 760px;
   margin: 60px auto 50px auto;
@@ -83,7 +83,7 @@ p {
   color: #374151;
 }
 
-/* ===== VERTICALE NAVIGATIE ===== */
+/* ===== VERTICALE NAVIGATIE BALKEN ===== */
 nav {
   max-width: 760px;
   margin: 0 auto 60px auto;
@@ -96,28 +96,30 @@ nav ul {
   margin: 0;
 
   display: flex;
-  flex-direction: column;     /* VERTICAAL */
+  flex-direction: column;   /* VERTICAAL */
   gap: 14px;
 }
 
-/* ===== BALKEN / BUTTONS ===== */
+/* KNOOPSTIJL */
 nav ul li a {
   display: block;
-  width: 100%;                 /* volledige breedte */
+  width: 100%;
   padding: 14px 22px;
-  border-radius: 12px;
 
-  background: #1e3a8a;         /* blauw (klassiek) */
+  background: #1e3a8a;   /* donkerblauw */
   color: #f9fafb;
   font-weight: 500;
   font-size: 17px;
+
   text-decoration: none;
+  border-radius: 12px;
 
   box-shadow: 0 6px 18px rgba(30, 58, 138, 0.35);
+
   transition: all 0.22s ease;
 }
 
-/* ===== HOVER ANIMATIE ===== */
+/* HOVER ANIMATIE */
 nav ul li a:hover {
   background: #1d4ed8;
   transform: translateX(8px) scale(1.02);
