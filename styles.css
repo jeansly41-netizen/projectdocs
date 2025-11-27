@@ -1,44 +1,72 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* ANIMATED BACKGROUND */
+/* ALGEMENE PAGINA-STIJL */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.7;
   font-size: 18px;
   margin: 0;
   padding: 0;
-
-  /* bewegende gradient achtergrond */
-  background: linear-gradient(120deg, #0f172a, #1d4ed8, #22c55e, #eab308);
-  background-size: 300% 300%;
-  animation: gradientMove 18s ease infinite;
+  color: #111827;
+  background: #f3f4f6; /* lichtgrijze, rustige achtergrond */
 }
 
-/* kaart in het midden */
+/* KAART / CONTAINER */
 .container {
-  max-width: 700px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.96);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
-  animation: fadeInUp 0.8s ease both;
+  max-width: 720px;
+  margin: 40px auto 80px auto; /* extra ruimte onderaan voor de balk */
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
 }
 
-/* NAVIGATIE BOVENAAN */
+/* TITELS & TEKST */
+h1 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+p {
+  margin-bottom: 14px;
+  color: #374151;
+}
+
+/* KLEINE accenten: sectie wat ruimte */
+section {
+  margin-top: 10px;
+}
+
+/* ONDERBALK - KLASSIEKE NAVIGATIE */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111827;           /* donkerblauw/grijs */
+  box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.35);
+  padding: 8px 0;
+  z-index: 10;
+}
+
 nav ul {
   list-style: none;
-  padding: 16px 24px;
+  padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px;
+  gap: 18px;
   justify-content: center;
   align-items: center;
-
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.5);
 }
 
 nav ul li {
@@ -48,74 +76,30 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #e5e7eb;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
   position: relative;
-  padding-bottom: 4px;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* animatie lijntje onder de link */
+/* Klassieke, rustige hover: zacht kleurtje + underline */
 nav ul li a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0%;
   height: 2px;
-  background: #38bdf8;
-  transition: width 0.25s ease;
+  width: 0%;
+  background: #60a5fa; /* lichtblauw lijntje */
+  transition: width 0.2s ease;
 }
 
 nav ul li a:hover {
+  background-color: #1f2937;  /* iets lichtere donkergrijs */
   color: #f9fafb;
 }
 
 nav ul li a:hover::after {
   width: 100%;
-}
-
-/* TITELS EN TEKST */
-h1 {
-  font-size: 32px;
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: #0f172a;
-}
-
-h2 {
-  font-size: 22px;
-  margin-top: 24px;
-  margin-bottom: 8px;
-  color: #1f2933;
-}
-
-p {
-  margin-bottom: 14px;
-  color: #374151;
-}
-
-/* kleine animatie bij laden */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ANIMATIE VOOR DE ACHTERGROND */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
