@@ -1,7 +1,7 @@
 /* Google Font inladen */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* ALGEMENE PAGINA-STIJL */
+/* ===== ALGEMENE PAGINA-STIJL ===== */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.7;
@@ -9,17 +9,63 @@ body {
   margin: 0;
   padding: 0;
   color: #111827;
-  background: #f3f4f6; /* lichtgrijze, rustige achtergrond */
+  background: #0f172a; /* donkerblauwe basis */
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* KAART / CONTAINER MET TEKST */
+/* ZACHTE ANIMATIE-VORMPJES OP DE ACHTERGROND */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 999px;
+  opacity: 0.17;
+  filter: blur(18px);
+  z-index: -1;
+  animation: floatShape 24s ease-in-out infinite alternate;
+}
+
+/* linksboven lichtblauwe vlek */
+body::before {
+  width: 260px;
+  height: 260px;
+  background: #3b82f6;
+  top: -60px;
+  left: -40px;
+}
+
+/* rechtsonder turquoise vlek */
+body::after {
+  width: 320px;
+  height: 320px;
+  background: #22c55e;
+  bottom: -80px;
+  right: -40px;
+}
+
+/* animatie voor de vormpjes */
+@keyframes floatShape {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -16px) scale(1.05);
+  }
+  100% {
+    transform: translate(-10px, 12px) scale(0.98);
+  }
+}
+
+/* ===== KAART / CONTAINER MET TEKST ===== */
 .container {
   max-width: 720px;
-  margin: 40px auto;
+  margin: 48px auto 80px auto;
   background: #ffffff;
   padding: 32px;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+  position: relative;
 }
 
 /* TITELS & TEKST */
@@ -46,85 +92,42 @@ section {
   margin-top: 10px;
 }
 
-/* NAVIGATIE MET GEKLEURDE BALKEN ONDERAAN DE PAGINA */
+/* ===== HORIZONTALE NAVBALK MET KNOPJES ===== */
 nav {
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 24px;
+  padding: 12px 0 24px 0;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 720px;
   display: flex;
-  flex-direction: column;  /* onder elkaar */
+  justify-content: center;
   gap: 12px;
+  flex-wrap: wrap; /* zodat het op kleine schermen netjes afbreekt */
 }
 
-/* BASISSTIJL VOOR ALLE BALKEN */
+/* BASISSTIJL VOOR ALLE BALKEN (KNOPPEN) */
 nav ul li a {
-  display: block;
+  display: inline-block;
   text-decoration: none;
-  color: white;
-  padding: 14px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.25s ease;
+  color: #f9fafb;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 16px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* één kleurstijl */
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
-/* HOME (GRIJS) */
-nav ul li:nth-child(1) a {
-  background: #6b7280;
-}
-nav ul li:nth-child(1) a:hover {
-  background: #4b5563;
-  transform: translateX(6px);
-}
-
-/* WEEK 1 (BLAUW) */
-nav ul li:nth-child(2) a {
-  background: #3b82f6;
-}
-nav ul li:nth-child(2) a:hover {
-  background: #2563eb;
-  transform: translateX(6px);
-}
-
-/* WEEK 2 (GROEN) */
-nav ul li:nth-child(3) a {
-  background: #22c55e;
-}
-nav ul li:nth-child(3) a:hover {
-  background: #16a34a;
-  transform: translateX(6px);
-}
-
-/* WEEK 3 (ORANJE) */
-nav ul li:nth-child(4) a {
-  background: #f97316;
-}
-nav ul li:nth-child(4) a:hover {
-  background: #ea580c;
-  transform: translateX(6px);
-}
-
-/* WEEK 4 (PAARS) */
-nav ul li:nth-child(5) a {
-  background: #8b5cf6;
-}
-nav ul li:nth-child(5) a:hover {
-  background: #7c3aed;
-  transform: translateX(6px);
-}
-
-/* WEEK 5 (GEEL) */
-nav ul li:nth-child(6) a {
-  background: #eab308;
-  color: #1e1e1e; /* donkere tekst voor leesbaarheid */
-}
-nav ul li:nth-child(6) a:hover {
-  background: #ca8a04;
-  color: #111;
-  transform: translateX(6px);
+/* MINI-ANIMATIE BIJ HOVER: IETS GROTER + IETS MEER SCHADUW */
+nav ul li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.55);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
