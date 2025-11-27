@@ -1,4 +1,4 @@
-/* Google Font inladen */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 /* ===== ALGEMENE PAGINA-STIJL ===== */
@@ -8,79 +8,76 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  color: #111827;
-  background: #0f172a; /* donkerblauwe basis */
+
+  color: #e5e7eb;
+  background: #0f172a;
+
   position: relative;
   overflow-x: hidden;
 }
 
-/* ZACHTE ANIMATIE-VORMPJES OP DE ACHTERGROND */
+/* ===== ZACHTE ACHTERGRONDANIMATIE ===== */
 body::before,
 body::after {
   content: "";
   position: fixed;
   border-radius: 999px;
-  opacity: 0.17;
-  filter: blur(18px);
+  opacity: 0.18;
+  filter: blur(40px);
   z-index: -1;
-  animation: floatShape 24s ease-in-out infinite alternate;
+  animation: floatShape 22s ease-in-out infinite alternate;
 }
 
-/* linksboven lichtblauwe vlek */
 body::before {
   width: 260px;
   height: 260px;
   background: #3b82f6;
-  top: -60px;
-  left: -40px;
+  top: -80px;
+  left: -50px;
 }
 
-/* rechtsonder turquoise vlek */
 body::after {
   width: 320px;
   height: 320px;
   background: #22c55e;
-  bottom: -80px;
-  right: -40px;
+  right: -60px;
+  bottom: -70px;
 }
 
-/* animatie voor de vormpjes */
 @keyframes floatShape {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(20px, -16px) scale(1.05);
-  }
-  100% {
-    transform: translate(-10px, 12px) scale(0.98);
-  }
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -18px); }
+  100% { transform: translate(-12px, 14px); }
 }
 
-/* ===== KAART / CONTAINER MET TEKST ===== */
+/* ===== KAART CONTAINER ===== */
 .container {
-  max-width: 720px;
-  margin: 48px auto 32px auto;
-  background: #ffffff;
-  padding: 32px;
-  border-radius: 14px;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
-  position: relative;
+  max-width: 780px;
+  margin: 60px auto 40px auto;
+
+  background: rgba(255, 255, 255, 0.96);
+  padding: 38px;
+
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+
+  color: #111827;
 }
 
-/* TITELS & TEKST */
+/* TITELS */
 h1 {
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: 8px;
+  font-size: 32px;
+  margin: 0 0 10px 0;
   color: #0f172a;
+  text-align: center;
 }
 
 h2 {
   font-size: 22px;
-  margin-top: 24px;
-  margin-bottom: 6px;
-  color: #111827;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #1f2937;
 }
 
 p {
@@ -88,45 +85,47 @@ p {
   color: #374151;
 }
 
-section {
-  margin-top: 10px;
-}
-
-/* ===== HORIZONTALE NAVBALK MET KNOPJES ===== */
+/* ===== HORIZONTALE NAVIGATION BUTTONS ===== */
 nav {
-  padding: 12px 0 32px 0;
+  padding: 10px 0 40px 0;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   margin: 0 auto;
-  max-width: 720px;
+  padding: 0;
+
+  max-width: 780px;
   display: flex;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap; /* zodat het op kleine schermen netjes afbreekt */
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-/* BASISSTIJL VOOR ALLE BALKEN (KNOPPEN) */
+/* Buttons */
 nav ul li a {
   display: inline-block;
   text-decoration: none;
-  color: #f9fafb;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-weight: 500;
+
+  padding: 12px 22px;
   font-size: 16px;
+  font-weight: 500;
 
-  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* één kleurstijl */
-  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+  border-radius: 999px;
+  color: #f9fafb;
 
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+
+  transition: 
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
 }
 
-/* MINI-ANIMATIE BIJ HOVER: IETS GROTER + IETS MEER SCHADUW */
+/* Hover */
 nav ul li a:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.55);
+  transform: translateY(-4px) scale(1.06);
   background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.55);
 }
