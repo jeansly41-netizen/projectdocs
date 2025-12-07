@@ -161,3 +161,14 @@ figure figcaption {
   font-size: 14px;
   color: #4b5563;
 }
+.image-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.image-row figure {
+  flex: 1;
+  max-width: 300px;
+}
