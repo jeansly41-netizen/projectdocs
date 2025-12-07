@@ -60,9 +60,11 @@ body {
   text-align: center;
 }
 .container h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  margin-top: 25px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  text-align: center;
   color: #0b173d;
 }
 
