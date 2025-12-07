@@ -45,7 +45,7 @@ body {
 /* ------------------------------- */
 .container {
   max-width: 850px;
-  margin: 80px auto 60px auto;
+  margin: 120px auto 60px auto; /* GROTERE BOVENMARGE → gelijk aan weekpagina’s */
   background: #ffffff;
   padding: 40px 50px;
   border-radius: 18px;
