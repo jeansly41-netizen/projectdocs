@@ -194,3 +194,38 @@ figure figcaption {
   transform: rotate(90deg);
   transform-origin: center center;
 }
+/* Modal voor klik-zoom op afbeeldingen */
+.img-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.img-modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.img-modal-caption {
+  margin-top: 12px;
+  color: #e5e7eb;
+  font-size: 16px;
+  text-align: center;
+}
+
+.img-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: #ffffff;
+  cursor: pointer;
+}
