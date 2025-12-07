@@ -138,6 +138,13 @@ figure img {
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.35);
   display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+figure a:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
 }
 
 figure figcaption {
