@@ -154,6 +154,7 @@ figure img {
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  display: block;
 }
 
 figure figcaption {
@@ -161,6 +162,8 @@ figure figcaption {
   font-size: 14px;
   color: #4b5563;
 }
+
+/* afbeeldingen naast elkaar */
 .image-row {
   display: flex;
   gap: 20px;
@@ -170,5 +173,5 @@ figure figcaption {
 
 .image-row figure {
   flex: 1;
-  max-width: 300px;
+  max-width: 280px;
 }
