@@ -26,37 +26,38 @@
       </p>
 
       <p>
-        Bij het <strong>perronscherm</strong> legde ik de focus op één perron.
+        Bij het <strong>perronscherm</strong> legde ik de focus op één perron,
+        zodat de reiziger snel ziet welke trein als volgende vertrekt.
       </p>
 
       <p>
         Voor het <strong>wagonscherm</strong> tekende ik de trein als een reeks
-        wagons met icoontjes.
+        wagons met icoontjes, zodat reizigers weten waar ze best kunnen instappen.
       </p>
 
-   <div class="image-row">
-  <figure>
-    <a href="scherm-overzicht.png" target="_blank">
-      <img src="scherm-overzicht.png" alt="Figma overzichtsscherm">
-    </a>
-    <figcaption>Figma overzichtsscherm</figcaption>
-  </figure>
+      <!-- FIGMA SCHERMEN - HORIZONTAAL -->
+      <div class="image-row">
+        <figure>
+          <a href="scherm-overzicht.png" target="_blank">
+            <img src="scherm-overzicht.png" alt="Figma overzichtsscherm">
+          </a>
+          <figcaption>Figma overzichtsscherm – alle treinen in één overzicht.</figcaption>
+        </figure>
 
-  <figure>
-    <a href="scherm-perron.png" target="_blank">
-      <img src="scherm-perron.png" alt="Figma perronscherm">
-    </a>
-    <figcaption>Figma perronscherm</figcaption>
-  </figure>
+        <figure>
+          <a href="scherm-perron.png" target="_blank">
+            <img src="scherm-perron.png" alt="Figma perronscherm">
+          </a>
+          <figcaption>Figma perronscherm – focus op één perron.</figcaption>
+        </figure>
 
-  <figure>
-    <a href="scherm-wagon.png" target="_blank">
-      <img src="scherm-wagon.png" alt="Figma wagonscherm">
-    </a>
-    <figcaption>Figma wagonscherm</figcaption>
-  </figure>
-</div>
-
+        <figure>
+          <a href="scherm-wagon.png" target="_blank">
+            <img src="scherm-wagon.png" alt="Figma wagonscherm">
+          </a>
+          <figcaption>Figma wagonscherm – samenstelling van de trein met iconen.</figcaption>
+        </figure>
+      </div>
     </section>
   </div>
 
@@ -70,38 +71,6 @@
       <li><a href="week5.html">Week 5 – Afwerking</a></li>
     </ul>
   </nav>
-  <!-- Klik-zoom modal -->
-  <div class="img-modal" id="imgModal">
-    <span class="img-modal-close" id="imgModalClose">&times;</span>
-    <img class="img-modal-content" id="imgModalImg" alt="">
-    <div class="img-modal-caption" id="imgModalCaption"></div>
-  </div>
 
-  <script>
-    (function() {
-      const modal = document.getElementById('imgModal');
-      const modalImg = document.getElementById('imgModalImg');
-      const modalCaption = document.getElementById('imgModalCaption');
-      const closeBtn = document.getElementById('imgModalClose');
-
-      document.querySelectorAll('.zoom-img').forEach(function(img) {
-        img.addEventListener('click', function() {
-          modal.style.display = 'flex';
-          modalImg.src = this.src;
-          modalCaption.textContent = this.alt || '';
-        });
-      });
-
-      closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-      });
-
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
