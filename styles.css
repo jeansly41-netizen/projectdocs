@@ -196,7 +196,7 @@ figure figcaption {
 }
 /* Schetsen rechtzetten */
 .rotate-sketch {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
   transform-origin: center center;
 }
 /* Modal voor klik-zoom op afbeeldingen */
