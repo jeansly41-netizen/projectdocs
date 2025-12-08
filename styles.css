@@ -196,7 +196,7 @@ figure figcaption {
 }
 /* Schetsen rechtzetten */
 .rotate-sketch {
-  transform: rotate(0deg);
+  transform: rotate(270deg);
   transform-origin: center center;
 }
 /* Modal voor klik-zoom op afbeeldingen */
@@ -233,4 +233,9 @@ figure figcaption {
   font-size: 32px;
   color: #ffffff;
   cursor: pointer;
+}
+/* Schetsfoto's recht zetten (niet draaien bij hover) */
+.fix-rotation {
+  transform: rotate(90deg);
+  transform-origin: center center;
 }
