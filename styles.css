@@ -155,16 +155,15 @@ figure figcaption {
 /* afbeeldingen naast elkaar */
 .image-row {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 30px;          /* afstand tussen de schetsen */
   margin-top: 30px;
 }
 
 .image-row figure {
   flex: 1;
-  max-width: 280px;
+  max-width: 260px;   /* zodat foto's kleiner zijn en mooier passen */
 }
-
 /* ------------------------------- */
 /*         RESPONSIVE MODE         */
 /* ------------------------------- */
