@@ -11,12 +11,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: #0b173d; 
+  background: #0b173d;
   color: #f1f5f9;
-  line-height: 1.7;
+  line-height: 1.8;
   overflow-x: hidden;
   position: relative;
-  font-size: 20px; /* GROTERE BASIS TEKST */
+  font-size: 22px; /* GROTERE BASIS TEKST */
 }
 
 /* ------------------------------- */
@@ -24,20 +24,20 @@ body {
 /* ------------------------------- */
 .bg-shape {
   position: fixed;
-  width: 520px;
-  height: 520px;
-  background: rgba(70, 130, 255, 0.28);
-  top: -150px;
-  left: -150px;
+  width: 600px;
+  height: 600px;
+  background: rgba(70, 130, 255, 0.30);
+  top: -160px;
+  left: -160px;
   border-radius: 50%;
-  filter: blur(95px);
-  animation: float 18s infinite alternate ease-in-out;
+  filter: blur(110px);
+  animation: float 16s infinite alternate ease-in-out;
   z-index: -1;
 }
 
 @keyframes float {
   0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(80px, 40px) scale(1.2); }
+  50%  { transform: translate(100px, 60px) scale(1.15); }
   100% { transform: translate(-40px, -10px) scale(1); }
 }
 
@@ -45,24 +45,25 @@ body {
 /*          CONTAINER BOX          */
 /* ------------------------------- */
 .container {
-  max-width: 1100px;   /* GROTER GEWORDEN */
-  margin: 160px auto 80px auto;
+  max-width: 1300px; /* GROTER */
+  margin: 180px auto 100px auto;
   background: #ffffff;
-  padding: 60px 70px;
-  border-radius: 20px;
-  box-shadow: 0 12px 60px rgba(0,0,0,0.35);
+  padding: 70px 90px;
+  border-radius: 22px;
+  box-shadow: 0 16px 70px rgba(0,0,0,0.35);
   color: #0b173d;
 }
 
 .container h1 {
-  font-size: 42px; /* GROTER */
+  font-size: 48px; /* GROTER */
   font-weight: 700;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .container h2 {
-  font-size: 28px; /* GROTER */
-  margin-bottom: 25px;
+  font-size: 32px; /* GROTER */
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -71,7 +72,7 @@ body {
 /* ------------------------------- */
 nav {
   position: fixed;
-  top: 25px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -82,29 +83,28 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: row;
-  gap: 14px; /* MEER RUIMTE */
+  gap: 16px;
 }
 
 nav ul li a {
   display: block;
-  padding: 14px 22px; /* GROTER */
+  padding: 16px 26px;
   background: #1d4ed8;
   color: white;
   text-decoration: none;
   border-radius: 999px;
-  text-align: center;
   font-weight: 500;
-  font-size: 17px; /* GROTER */
+  font-size: 19px; /* GROTER */
+  width: 260px; /* GROTER */
+  text-align: center;
   transition: 0.25s;
-  width: 230px; /* GROTER */
-  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.45);
+  box-shadow: 0 6px 22px rgba(29, 78, 216, 0.45);
 }
 
 nav ul li a:hover {
-  transform: translateY(-4px) scale(1.07);
+  transform: translateY(-5px) scale(1.08);
   background: #2563eb;
-  box-shadow: 0 14px 30px rgba(29, 78, 216, 0.6);
+  box-shadow: 0 14px 35px rgba(29, 78, 216, 0.6);
 }
 
 /* ------------------------------- */
@@ -113,31 +113,31 @@ nav ul li a:hover {
 .image-row {
   display: flex;
   justify-content: center;
-  gap: 40px; 
-  margin-top: 40px;
+  gap: 50px;
+  margin-top: 50px;
 }
 
 .image-row figure {
   flex: 1;
-  max-width: 320px; /* GROTER */
+  max-width: 380px; /* GROTERE AFBEELDINGEN */
 }
 
 figure img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
 }
 
 figure img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+  transform: scale(1.10); /* GROTERE HOVER */
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
 }
 
 figure figcaption {
-  margin-top: 12px;
-  font-size: 16px;
+  margin-top: 16px;
+  font-size: 18px; /* GROTER */
   color: #4b5563;
   text-align: center;
 }
@@ -145,19 +145,17 @@ figure figcaption {
 /* ------------------------------- */
 /*         RESPONSIVE MODE         */
 /* ------------------------------- */
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
   nav ul {
     flex-wrap: wrap;
-    justify-content: center;
   }
   nav ul li a {
-    width: 180px;
-    font-size: 15px;
-    padding: 10px 14px;
+    width: 200px;
+    font-size: 17px;
   }
   .container {
-    padding: 35px;
-    margin: 120px 20px 40px;
+    margin: 140px 20px 40px;
+    padding: 40px;
   }
   .image-row {
     flex-direction: column;
