@@ -11,11 +11,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: #0b173d;       
+  background: #0b173d; 
   color: #f1f5f9;
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
   position: relative;
+  font-size: 20px; /* GROTERE BASIS TEKST */
 }
 
 /* ------------------------------- */
@@ -23,51 +24,46 @@ body {
 /* ------------------------------- */
 .bg-shape {
   position: fixed;
-  width: 420px;
-  height: 420px;
-  background: rgba(70, 130, 255, 0.25);
-  top: -120px;
-  left: -120px;
+  width: 520px;
+  height: 520px;
+  background: rgba(70, 130, 255, 0.28);
+  top: -150px;
+  left: -150px;
   border-radius: 50%;
-  filter: blur(85px);
+  filter: blur(95px);
   animation: float 18s infinite alternate ease-in-out;
   z-index: -1;
 }
 
 @keyframes float {
   0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(40px, 20px) scale(1.1); }
-  100% { transform: translate(-20px, -10px) scale(0.95); }
+  50%  { transform: translate(80px, 40px) scale(1.2); }
+  100% { transform: translate(-40px, -10px) scale(1); }
 }
 
 /* ------------------------------- */
 /*          CONTAINER BOX          */
 /* ------------------------------- */
 .container {
-  max-width: 850px;
-  margin: 120px auto 60px auto;
+  max-width: 1100px;   /* GROTER GEWORDEN */
+  margin: 160px auto 80px auto;
   background: #ffffff;
-  padding: 40px 50px;
-  border-radius: 18px;
-  box-shadow: 0 10px 45px rgba(0,0,0,0.35);
+  padding: 60px 70px;
+  border-radius: 20px;
+  box-shadow: 0 12px 60px rgba(0,0,0,0.35);
   color: #0b173d;
 }
 
 .container h1 {
-  margin: 0 0 10px 0;
-  padding-top: 10px;
-  font-size: 32px;
+  font-size: 42px; /* GROTER */
   font-weight: 700;
   text-align: center;
 }
 
 .container h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 8px;
-  margin-bottom: 18px;
+  font-size: 28px; /* GROTER */
+  margin-bottom: 25px;
   text-align: center;
-  color: #0b173d;
 }
 
 /* ------------------------------- */
@@ -75,7 +71,7 @@ body {
 /* ------------------------------- */
 nav {
   position: fixed;
-  top: 20px;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -87,100 +83,86 @@ nav ul {
   padding: 0;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 14px; /* MEER RUIMTE */
 }
 
 nav ul li a {
   display: block;
-  padding: 10px 16px;
+  padding: 14px 22px; /* GROTER */
   background: #1d4ed8;
   color: white;
   text-decoration: none;
   border-radius: 999px;
   text-align: center;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 17px; /* GROTER */
   transition: 0.25s;
-  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.45);
-  width: 200px;
+  width: 230px; /* GROTER */
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.45);
 }
 
-/* hover animatie */
 nav ul li a:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-4px) scale(1.07);
   background: #2563eb;
-  box-shadow: 0 10px 22px rgba(29, 78, 216, 0.6);
+  box-shadow: 0 14px 30px rgba(29, 78, 216, 0.6);
 }
 
 /* ------------------------------- */
 /*       FIGURES & AFBEELDINGEN    */
 /* ------------------------------- */
-figure {
-  margin: 24px 0;
-}
-
-figure img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-  display: block;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: zoom-in;
-}
-
-figure a:hover img {
-  transform: scale(1.08);
-  box-shadow: 0 12px 34px rgba(0,0,0,0.45);
-}
-
-figure figcaption {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #4b5563;
-  text-align: center;
-}
-
-/* ------------------------------- */
-/*      AFBEELDINGEN RIJ           */
-/* ------------------------------- */
 .image-row {
   display: flex;
   justify-content: center;
-  gap: 40px;       
-  margin-top: 30px;
+  gap: 40px; 
+  margin-top: 40px;
 }
 
 .image-row figure {
   flex: 1;
-  max-width: 260px;
+  max-width: 320px; /* GROTER */
+}
+
+figure img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+figure img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+}
+
+figure figcaption {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #4b5563;
+  text-align: center;
 }
 
 /* ------------------------------- */
 /*         RESPONSIVE MODE         */
 /* ------------------------------- */
 @media(max-width: 900px) {
-
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   nav ul li a {
-    font-size: 14px;
-    padding: 8px 12px;
-    width: 160px;
+    width: 180px;
+    font-size: 15px;
+    padding: 10px 14px;
   }
-
   .container {
-    margin: 100px 20px 40px 20px;
-    padding: 30px;
+    padding: 35px;
+    margin: 120px 20px 40px;
   }
-
   .image-row {
     flex-direction: column;
     align-items: center;
   }
-
   .image-row figure {
     max-width: 100%;
   }
